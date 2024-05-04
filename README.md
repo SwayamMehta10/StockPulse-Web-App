@@ -1,0 +1,1 @@
+A web app to help users who are new to the stock market get an easy understanding of stocks through company banckground, forecast insights and technical analysis along with an AI assitant chatbot. The chatbot can answer all queries related to stock market, technical jargon and also tell you the real time stock prices of companies.
