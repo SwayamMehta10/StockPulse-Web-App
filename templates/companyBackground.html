@@ -1,0 +1,129 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		
+		<link rel="stylesheet" href="../static/css/Navbar.css" />
+		<link rel="stylesheet" href="../static/css/companyBackground.css" />
+		<link rel="stylesheet" href="../static/css/chatbot.css" />
+		<title>StockPulse</title>
+	</head>
+	<body>
+		<!------------------------------------NAVBAR------------------------------------------------------>
+		<nav class="navbar">
+			<div class="logo"><a href="#">StockPulse</a></div>
+
+			<div class="navdiv">
+				<ul class="navlinks">
+					<!-- <input type="checkbox" id="checkbox_toggle" /> -->
+					<!-- <label for="checkbox_toggle" class="hamburger">&#9776;</label> -->
+					<div class="menu">
+						<li><a href="{{ url_for('index') }}">Home</a></li>
+						<li><a href="{{ url_for('aboutUs') }}">About Us</a></li>
+						<li>
+							<a href="{{ url_for('companyBackground') }}"
+								>Company Background</a
+							>
+						</li>
+						<li>
+							<a href="{{ url_for('forecast') }}">Forecast</a>
+						</li>
+						<li>
+							<a href="{{ url_for('technicalAnalysis') }}"
+								>Technical Analysis</a
+							>
+						</li>
+						<!-- <li><a href="news.html">Sentiment Analysis</a></li> -->
+					</div>
+				</ul>
+			</div>
+		</nav>
+
+		<div class="container">
+			<label for="company">Select Company:</label>
+			<select id="company" name="company">
+				{% for companyName in companyNames %}
+				<option value="{{ companyName }}">{{ companyName }}</option>
+				{% endfor %}
+			</select>
+			<br />
+
+			<button id="applyButton">Apply</button>
+
+			<div class="company-info">
+				<h3 id="company-heading"></h3>
+				<p id="company-summary"></p>
+				<!-- <hr class="hidden" /> -->
+				<p id="company-website"><a></a></p>
+				<!-- <hr class="hidden" /> -->
+				<p id="company-sector"></p>
+				<!-- <hr class="hidden" /> -->
+				<p id="company-industry"></p>
+				<!-- <hr class="hidden" /> -->
+			</div>
+
+			<div class="financial_statements">
+				<div class="financial_statement_options">
+					<h3 class="hidden">Financial Statements</h3>
+					<button id="income" class="hidden">Income</button>
+					<button id="quarterly_income" class="hidden">
+						Quarterly Income
+					</button>
+					<button id="cashflow" class="hidden">Cashflow</button>
+					<button id="balancesheet" class="hidden">
+						Balancesheet
+					</button>
+					<button id="quarterly_balancesheet" class="hidden">
+						Quarterly Balancesheet
+					</button>
+				</div>
+
+				<div id="financial_statement"></div>
+			</div>
+
+			<h3 class="hidden">Key Executives</h3>
+			<div id="key_executives"></div>
+
+			<h3 class="hidden">ISS Governance Quality Score</h3>
+			<p class="hidden">
+				The <i>Governance QualityScore</i> is a data-driven tool that
+				helps investors assess corporate governance risk in their
+				portfolios. It's a dynamic, relative governance profile scoring
+				solution used by leading institutional investors. The score is
+				based on publicly disclosed data on a company's governance
+				practices and covers four key areas of corporate governance:
+				<i>Board structure</i>, <i>Compensation</i>,
+				<i>Shareholder rights</i>, and <i>Audit and risk oversight</i>.
+				The score looks at 220 individual factors, including qualitative
+				aspects of governance, such as global governance standards and
+				alignment with ESG voting policy according to region.
+			</p>
+			<div id="risk_plot"></div>
+			<div id="chatbot-container">
+				<h3 id="stockpulse-ai">StockPulse Assistant</h3>
+				<div id="chatbot-window">
+					<!-- Chatbot messages will be displayed here -->
+				</div>
+				<div class="chat-input-container">
+					<input
+						type="text"
+						id="user-input"
+						placeholder="Type your message..."
+					/>
+					<button id="send-btn">Send</button>
+				</div>
+			</div>
+		</div>
+		<script type="importmap">
+			{
+				"imports": {
+					"@google/generative-ai": "https://esm.run/@google/generative-ai"
+				}
+			}
+		</script>
+		<script type="module" src="../static/js/chatbot.js"></script>
+		<script src="../static/js/info.js"></script>
+	</body>
+</html>

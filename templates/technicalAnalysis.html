@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@3.0.1/dist/css/multi-select-tag.css"
+		/>
+		<script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@3.0.1/dist/js/multi-select-tag.js"></script>
+		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+		
+		<link rel="stylesheet" href="../static/css/Navbar.css" />
+		<link rel="stylesheet" href="../static/css/technicalAnalysis.css" />
+		<link rel="stylesheet" href="../static/css/chatbot.css" />
+		<title>StockPulse</title>
+	</head>
+	<body>
+		<!------------------------------------NAVBAR------------------------------------------------------>
+		<nav class="navbar">
+			<div class="logo"><a href="#">StockPulse</a></div>
+
+			<div class="navdiv">
+				<ul class="navlinks">
+					<!-- <input type="checkbox" id="checkbox_toggle" /> -->
+					<!-- <label for="checkbox_toggle" class="hamburger">&#9776;</label> -->
+					<div class="menu">
+						<li><a href="{{ url_for('index') }}">Home</a></li>
+						<li><a href="{{ url_for('aboutUs') }}">About Us</a></li>
+						<li>
+							<a href="{{ url_for('companyBackground') }}"
+								>Company Background</a
+							>
+						</li>
+						<li>
+							<a href="{{ url_for('forecast') }}">Forecast</a>
+						</li>
+						<li>
+							<a href="{{ url_for('technicalAnalysis') }}"
+								>Technical Analysis</a
+							>
+						</li>
+					</div>
+				</ul>
+			</div>
+		</nav>
+
+		<div class="container">
+			<label for="company">Select Company:</label>
+			<select id="company" name="company">
+				{% for companyName in companyNames %}
+				<option value="{{ companyName }}">{{ companyName }}</option>
+				{% endfor %}
+			</select>
+
+			<br />
+			<label for="indicator">Select Technical Indicator:</label>
+			<select id="indicator" name="indicator" multiple>
+				<option value="none">None</option>
+				<option value="sma">50-day SMA</option>
+				<option value="ewma">200-day EWMA</option>
+				<option value="bb">Bollinger Bands</option>
+				<option value="rsi">RSI</option>
+				<option value="mfi">Money Flow Index</option>
+				<option value="atr">Average True Range</option>
+				<option value="emv">14-day Ease of Movement</option>
+			</select>
+			<br />
+
+			<label>Select Period:</label>
+			<select id="period">
+				<option value="custom" selected>Custom</option>
+				<option value="1d">1D</option>
+				<option value="5d">5D</option>
+				<option value="3mo">3M</option>
+				<option value="6mo">6M</option>
+				<option value="1y">1Y</option>
+				<option value="5y">5Y</option>
+				<option value="max">Max</option>
+			</select>
+			<br />
+
+			<label for="customDate">Custom Date Range:</label>
+			<input type="date" id="startDate" />
+			<input type="date" id="endDate" />
+			<br />
+
+			<button id="applyButton">Apply</button>
+			<br />
+
+			<div id="stockChart"></div>
+			<br />
+
+			<h2 id="heading"></h2>
+			<div id="stockAnalysis"></div>
+
+			<div id="chatbot-container">
+				<h3 id="stockpulse-ai">StockPulse Assistant</h3>
+				<div id="chatbot-window">
+					<!-- Chatbot messages will be displayed here -->
+				</div>
+				<div class="chat-input-container">
+					<input
+						type="text"
+						id="user-input"
+						placeholder="Type your message..."
+					/>
+					<button id="send-btn">Send</button>
+				</div>
+			</div>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+			new MultiSelectTag("indicator", {
+				rounded: true,
+				shadow: true,
+				placeholder: "Search",
+				tagColor: {
+					textColor: "#327b2c",
+					borderColor: "#92e681",
+					bgColor: "#eaffe6",
+				},
+				onChange: function (values) {
+					console.log(values);
+				},
+			});
+		</script>
+		<script type="importmap">
+			{
+				"imports": {
+					"@google/generative-ai": "https://esm.run/@google/generative-ai"
+				}
+			}
+		</script>
+		<script type="module" src="../static/js/chatbot.js"></script>
+		<script src="../static/js/analysis.js"></script>
+	</body>
+</html>

@@ -1,0 +1,73 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../static/css/Navbar.css" />
+        <link rel="stylesheet" href="../static/css/home.css" />
+        <link rel="stylesheet" href="../static/css/aboutUs.css" />
+
+        <title>StockPulse</title>
+    </head>
+    <body>
+        <!------------------------------------NAVBAR------------------------------------------------------>
+        <nav class="navbar">
+            <div class="logo"><a href="#">StockPulse</a></div>
+
+            <div class="navdiv">
+                <ul class="navlinks">
+                    <!-- <input type="checkbox" id="checkbox_toggle" /> -->
+                    <!-- <label for="checkbox_toggle" class="hamburger">&#9776;</label> -->
+                    <div class="menu">
+                        <li><a href="{{ url_for('index') }}">Home</a></li>
+                        <li><a href="{{ url_for('aboutUs') }}">About Us</a></li>
+                        <li>
+                            <a href="{{ url_for('companyBackground') }}"
+                                >Company Background</a
+                            >
+                        </li>
+                        <li>
+                            <a href="{{ url_for('forecast') }}"
+                                >Forecast</a
+                            >
+                        </li>
+                        <li>
+                            <a href="{{ url_for('technicalAnalysis') }}"
+                                >Technical Analysis</a
+                            >
+                        </li>
+                        <!-- <li><a href="news.html">Sentiment Analysis</a></li> -->
+                    </div>
+                </ul>
+            </div>
+        </nav>
+
+        <!------------------------------------HOME------------------------------------------>
+        <img id="mainPage" src="../static/images/mainPage.jpg" />
+        <div class="home">
+            <img src="../static/images/homepic.webp" alt="StockPulse" />
+            <p>
+                <b>Stock market definition </b><br />
+                The stock market is where investors buy and sell shares of
+                companies. It’s a set of exchanges where companies issue shares
+                and other securities for trading. It also includes
+                over-the-counter (OTC) marketplaces where investors trade
+                securities directly with each other (rather than through an
+                exchange).
+                <br /><br /><br />
+                <b>The stock market explained </b><br />
+                In practice, the term "stock market" often refers to one of the
+                major stock market indexes, such as the Dow Jones Industrial
+                Average or the S&P 500. These represent large sections of the
+                stock market. Because it's hard to track every single company,
+                the performance of the indexes is viewed as representative of
+                the entire market. You might see a news headline that says the
+                stock market has moved lower or that the stock market has closed
+                up or down for the day. This often means stock market indexes
+                have moved up or down, and stocks within the index have gained
+                or lost value. Investors who buy and sell stocks hope to profit
+                through this movement in stock prices.
+            </p>
+        </div>
+    </body>
+</html>
