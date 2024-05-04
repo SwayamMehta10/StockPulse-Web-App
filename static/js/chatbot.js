@@ -38,6 +38,15 @@ const chatGemini = async (message) => {
 	appendGeminiMessage(text);
 };
 
+$("#chatButton").click(function () {
+	var chatbotContainer = document.getElementById("chatbot-container");
+	if (chatbotContainer.style.display === "none") {
+		chatbotContainer.style.display = "block";
+	} else {
+		chatbotContainer.style.display = "none";
+	}
+});
+
 document.getElementById("send-btn").addEventListener("click", function () {
 	var userInput = document.getElementById("user-input").value;
 	if (userInput.trim() !== "") {
