@@ -70,13 +70,6 @@ $(document).ready(function () {
 	}
 
 	$("#applyButton").click(function () {
-		var chatbotContainer = document.getElementById("chatbot-container");
-		if (chatbotContainer.style.display === "none") {
-			chatbotContainer.style.display = "block";
-		} else {
-			chatbotContainer.style.display = "none";
-		}
-
 		company = $("#company").val().split(":");
 		ticker = company[1].trim();
 		officialCompanyName = company[0].trim();
