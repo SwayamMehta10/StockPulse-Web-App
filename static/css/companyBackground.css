@@ -13,6 +13,23 @@ select:hover {
 
 .container {
 	margin: 15px;
+	display: flex;
+	flex-direction: column;
+	text-align: justify;
+	align-items: center;
+	justify-content: center;
+}
+
+.company {
+	display: flex;
+	position: relative;
+	justify-content: center;
+}
+.company-info {
+	position: relative;
+	justify-content: center;
+	margin-left: 10vw;
+	margin-right: 10vw;
 }
 
 *:not(nav):not(body) {
@@ -60,16 +77,34 @@ button:active {
 	display: none;
 }
 
-.financial_statements, .key_executives {
+.financial_statements {
 	display: flex;
 	flex-direction: column;
-	align-items: left;
+	align-items: center;
+	text-align: center;
+}
+.key_executives {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
-th, td{
-	text-align: left;
+th,
+td {
+	text-align: center;
+	border: 0;
 	padding-top: 15px;
 	padding-bottom: 15px;
 	padding-right: 15px;
 	padding-left: 5px;
+}
+
+thead {
+	background-color: rgb(255, 198, 123);
+}
+tr:nth-child(even) {
+	background-color: rgb(255, 219, 171);
+}
+tr:hover {
+	background-color: rgb(255, 198, 123);
 }

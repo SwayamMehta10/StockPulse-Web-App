@@ -1,11 +1,14 @@
 .container {
-	margin: 15px;
+	margin-top: 2vw;
+	margin-left: 5vw;
+	margin-right: 5vw;
+	text-align: center;
 }
 
-*:not(nav) {
+/* *:not(nav) {
 	margin-top: 5px;
 	margin-bottom: 5px;
-}
+} */
 
 .hidden {
 	display: none;

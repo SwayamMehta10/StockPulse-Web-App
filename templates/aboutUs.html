@@ -1,90 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../static/css/Navbar.css" />
-    <link rel="stylesheet" href="../static/css/aboutUs.css" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../static/css/Navbar.css" />
+		<link rel="stylesheet" href="../static/css/aboutUs.css" />
 
-    <title>StockPulse</title>
-  </head>
-  <body>
-    <nav class="navbar">
-      <div class="logo"><a href="#">StockPulse</a></div>
+		<title>StockPulse</title>
+	</head>
+	<body>
+		<nav class="navbar">
+			<div class="logo"><a href="#">StockPulse</a></div>
 
-      <div class="navdiv">
-        <ul class="navlinks">
-          <!-- <input type="checkbox" id="checkbox_toggle" /> -->
-          <!-- <label for="checkbox_toggle" class="hamburger">&#9776;</label> -->
-          <div class="menu">
-            <li><a href="{{ url_for('index') }}">Home</a></li>
-            <li><a href="{{ url_for('aboutUs') }}">About Us</a></li>
-            <li><a href="{{ url_for('companyBackground') }}">Company Background</a></li>
-            <li><a href="{{ url_for('forecast') }}">Forecast</a></li>
-            <li><a href="{{ url_for('technicalAnalysis') }}">Technical Analysis</a></li>
-            <!-- <li><a href="news.html">Sentiment Analysis</a></li> -->
-          </div>
-        </ul>
-      </div>
-    </nav>
-    <section id="about" class="about">
-      <div class="about-section">
-        <h1>About Us Page</h1>
-        <p>Some text about who we are and what we do.</p>
-        <p>
-          Resize the browser window to see that this page is responsive by the
-          way.
-        </p>
-      </div>
+			<div class="navdiv">
+				<ul class="navlinks">
+					<!-- <input type="checkbox" id="checkbox_toggle" /> -->
+					<!-- <label for="checkbox_toggle" class="hamburger">&#9776;</label> -->
+					<div class="menu">
+						<li><a href="{{ url_for('index') }}">Home</a></li>
+						<li><a href="{{ url_for('aboutUs') }}">About Us</a></li>
+						<li>
+							<a href="{{ url_for('companyBackground') }}"
+								>Company Background</a
+							>
+						</li>
+						<li>
+							<a href="{{ url_for('forecast') }}">Forecast</a>
+						</li>
+						<li>
+							<a href="{{ url_for('technicalAnalysis') }}"
+								>Technical Analysis</a
+							>
+						</li>
+						<!-- <li><a href="news.html">Sentiment Analysis</a></li> -->
+					</div>
+				</ul>
+			</div>
+		</nav>
+		<section id="about" class="about">
+			<div class="about-section">
+				<h1>About Us Page</h1>
+				<br />
+				<p>
+					At StockPulse, we're passionate about demystifying the stock
+					market and empowering individuals to embark on their trading
+					journey with confidence. Our user-friendly platform offers
+					comprehensive insights, technical analysis tools, and
+					real-time price predictions to support traders of all
+					levels, from novices to seasoned professionals. Whether
+					you're just starting out or refining your trategies, our
+					team is dedicated to providing the resources and guidance
+					you need to succeed. Join us today and unlock the potential
+					of stock market trading with StockPulse
+				</p>
 
-      <h2 style="text-align: center">Our Team</h2>
-      <div class="row">
-        <div class="column">
-          <div class="card">
-            <img src="../static/images/boy.jpg" style="width: 100%" />
-            <div class="container">
-              <h2>Nikhil Agarwal</h2>
-              <p class="title">CEO & Founder</p>
-              <br />
-              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-              <p>jane@example.com</p>
-              <br />
-              <p><button class="button">Contact</button></p>
-            </div>
-          </div>
-        </div>
+				<br /><br />
+			</div>
+			<br /><br />
 
-        <div class="column">
-          <div class="card">
-            <img src="../static/images/boy.jpg" style="width: 100%" />
-            <div class="container">
-              <h2>Swayam Mehta</h2>
-              <p class="title">Art Director</p>
-              <br />
-              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-              <p>mike@example.com</p>
-              <br />
-              <p><button class="button">Contact</button></p>
-            </div>
-          </div>
-        </div>
+			<h2 style="text-align: center">Our Team</h2>
+			<br /><br />
 
-        <div class="column">
-          <div class="card">
-            <img src="../static/images/boy.jpg" style="width: 100%" />
-            <div class="container">
-              <h2>Shrikant Hurkat</h2>
-              <p class="title">Designer</p>
-              <br />
-              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-              <p>john@example.com</p>
-              <br />
-              <p><button class="button">Contact</button></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </body>
+			<div class="row">
+				<div class="column">
+					<div class="card">
+						<img
+							src="../static/images/Nikhil.jpg"
+							style="width: 100%"
+						/>
+						<div class="container">
+							<h2>Nikhil Agarwal</h2>
+							<p class="title">Software Engineer</p>
+							<br />
+							<p>Trader by day, Coder by night</p>
+							<p>nikhilagarwal.20.na@gmail.com</p>
+							<br />
+							<!-- <p><button class="button">Contact</button></p> -->
+						</div>
+					</div>
+				</div>
+
+				<div class="column">
+					<div class="card">
+						<img
+							src="../static/images/Swayam.jpg"
+							style="width: 100%"
+						/>
+						<div class="container">
+							<h2>Swayam Mehta</h2>
+							<p class="title">Software Engineer</p>
+							<br />
+							<p>
+								Adept at Backend and a Stock Market enthusiast.
+							</p>
+							<p>swayam10.mht@gmail.com</p>
+							<br />
+							<!-- <p><button class="button">Contact</button></p> -->
+						</div>
+					</div>
+				</div>
+
+				<div class="column">
+					<div class="card">
+						<img
+							src="../static/images/Shrikant.jpg"
+							style="width: 100%"
+						/>
+						<div class="container">
+							<h2>Shrikant Hurkat</h2>
+							<p class="title">Software Engineer</p>
+							<br />
+							<p>Designer and Trader</p>
+							<p>shrikantjhurkat@gmail.com</p>
+							<br />
+							<!-- <p><button class="button">Contact</button></p> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
 </html>

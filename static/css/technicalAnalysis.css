@@ -6,6 +6,30 @@ select {
 	font-size: 16px;
 	cursor: pointer;
 }
+.indicator-input {
+	width: 5em;
+}
+.flex-box {
+	display: flex;
+	flex-direction: row;
+}
+.box {
+	display: flex;
+	justify-content: space-evenly;
+	text-align: left;
+	margin: 2em;
+	width: 50%;
+}
+.box-2 {
+	display: flex;
+	justify-content: center;
+	text-align: left;
+	margin: 2em;
+	width: 50%;
+}
+.container {
+	text-align: center;
+}
 
 select:hover {
 	border-color: #888;
@@ -23,4 +47,8 @@ select:hover {
 
 #customDate:hover {
 	background-color: #0056b3;
+}
+
+.mult-select-tag {
+	padding: 10px 50px;
 }

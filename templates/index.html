@@ -1,73 +1,169 @@
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="../static/css/Navbar.css" />
-        <link rel="stylesheet" href="../static/css/home.css" />
-        <link rel="stylesheet" href="../static/css/aboutUs.css" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../static/css/Navbar.css" />
+		<link rel="stylesheet" href="../static/css/home.css" />
+		<link rel="stylesheet" href="../static/css/aboutUs.css" />
 
-        <title>StockPulse</title>
-    </head>
-    <body>
-        <!------------------------------------NAVBAR------------------------------------------------------>
-        <nav class="navbar">
-            <div class="logo"><a href="#">StockPulse</a></div>
+		<title>StockPulse</title>
+	</head>
+	<body>
+		<!------------------------------------NAVBAR------------------------------------------------------>
+		<nav class="navbar">
+			<div class="logo"><a href="#">StockPulse</a></div>
 
-            <div class="navdiv">
-                <ul class="navlinks">
-                    <!-- <input type="checkbox" id="checkbox_toggle" /> -->
-                    <!-- <label for="checkbox_toggle" class="hamburger">&#9776;</label> -->
-                    <div class="menu">
-                        <li><a href="{{ url_for('index') }}">Home</a></li>
-                        <li><a href="{{ url_for('aboutUs') }}">About Us</a></li>
-                        <li>
-                            <a href="{{ url_for('companyBackground') }}"
-                                >Company Background</a
-                            >
-                        </li>
-                        <li>
-                            <a href="{{ url_for('forecast') }}"
-                                >Forecast</a
-                            >
-                        </li>
-                        <li>
-                            <a href="{{ url_for('technicalAnalysis') }}"
-                                >Technical Analysis</a
-                            >
-                        </li>
-                        <!-- <li><a href="news.html">Sentiment Analysis</a></li> -->
-                    </div>
-                </ul>
-            </div>
-        </nav>
+			<div class="navdiv">
+				<ul class="navlinks">
+					<!-- <input type="checkbox" id="checkbox_toggle" /> -->
+					<!-- <label for="checkbox_toggle" class="hamburger">&#9776;</label> -->
+					<div class="menu">
+						<li><a href="{{ url_for('index') }}">Home</a></li>
+						<li><a href="{{ url_for('aboutUs') }}">About Us</a></li>
+						<li>
+							<a href="{{ url_for('companyBackground') }}"
+								>Company Background</a
+							>
+						</li>
+						<li>
+							<a href="{{ url_for('forecast') }}">Forecast</a>
+						</li>
+						<li>
+							<a href="{{ url_for('technicalAnalysis') }}"
+								>Technical Analysis</a
+							>
+						</li>
+						<!-- <li><a href="news.html">Sentiment Analysis</a></li> -->
+					</div>
+				</ul>
+			</div>
+		</nav>
 
-        <!------------------------------------HOME------------------------------------------>
-        <img id="mainPage" src="../static/images/mainPage.jpg" />
-        <div class="home">
-            <img src="../static/images/homepic.webp" alt="StockPulse" />
-            <p>
-                <b>Stock market definition </b><br />
-                The stock market is where investors buy and sell shares of
-                companies. It’s a set of exchanges where companies issue shares
-                and other securities for trading. It also includes
-                over-the-counter (OTC) marketplaces where investors trade
-                securities directly with each other (rather than through an
-                exchange).
-                <br /><br /><br />
-                <b>The stock market explained </b><br />
-                In practice, the term "stock market" often refers to one of the
-                major stock market indexes, such as the Dow Jones Industrial
-                Average or the S&P 500. These represent large sections of the
-                stock market. Because it's hard to track every single company,
-                the performance of the indexes is viewed as representative of
-                the entire market. You might see a news headline that says the
-                stock market has moved lower or that the stock market has closed
-                up or down for the day. This often means stock market indexes
-                have moved up or down, and stocks within the index have gained
-                or lost value. Investors who buy and sell stocks hope to profit
-                through this movement in stock prices.
-            </p>
-        </div>
-    </body>
+		<!------------------------------------HOME------------------------------------------>
+		<img id="mainPage" src="../static/images/mainPage.jpg" style="height: 200px; width: 100%;"/>
+		<div class="home-container">
+			<div class="home">
+				<img src="../static/images/homepic.webp" alt="StockPulse" />
+				<p>
+					<b style="font-size: 20px">Stock Market Definition </b
+					><br /><br />
+					The stock market is where investors buy and sell shares of
+					companies. It’s a set of exchanges where companies issue
+					shares and other securities for trading. It also includes
+					over-the-counter (OTC) marketplaces where investors trade
+					securities directly with each other (rather than through an
+					exchange).
+					<br /><br /><br />
+					<b style="font-size: 20px">The Stock Market Explained </b
+					><br /><br />
+					In practice, the term "stock market" often refers to one of
+					the major stock market indexes, such as the Dow Jones
+					Industrial Average or the S&P 500. These represent large
+					sections of the stock market. Because it's hard to track
+					every single company, the performance of the indexes is
+					viewed as representative of the entire market. You might see
+					a news headline that says the stock market has moved lower
+					or that the stock market has closed up or down for the day.
+					This often means stock market indexes have moved up or down,
+					and stocks within the index have gained or lost value.
+					Investors who buy and sell stocks hope to profit through
+					this movement in stock prices.
+				</p>
+				<br /><br />
+			</div>
+			<h1>Our Features</h1>
+			<div class="home-rev">
+				<img
+					src="../static/images/CompanyBg-home.jpeg"
+					alt="Company Background"
+				/>
+				<p>
+					<b style="font-size: 20px"> Company Background</b
+					><br /><br />
+					This module of ours provides a concise overview of a
+					business, offering essential information about its identity,
+					mission, products or services, target market, and key
+					milestones. It serves as a snapshot that helps investors,
+					customers, and stakeholders understand the company's purpose
+					and value proposition. This section typically includes
+					details such as the company's history, its founders or
+					leadership team, its core values, unique selling points,
+					competitive advantages, and any notable achievements or
+					awards. Additionally, it may highlight the company's growth
+					trajectory, market position, and future aspirations.
+					Overall, the "Company Description" serves as a foundational
+					component of a business plan or company profile, offering a
+					clear and compelling narrative about the organization's
+					identity and goals.
+				</p>
+			</div>
+			<div class="home">
+				<img src="../static/images/forecast-home.jpg" alt="Forecast" />
+				<p>
+					<b style="font-size: 20px"> Forecast </b><br /><br />
+					This module of ours is a predictive analysis tool that
+					utilizes a combination of sentiment analysis and technical
+					analysis to predict the future prices of stocks. By
+					analyzing market sentiment, which involves assessing the
+					overall feeling or attitude of investors and traders towards
+					a particular stock, the forecast can gauge the market's
+					optimism or pessimism. This sentiment analysis often
+					involves processing data from social media, news articles,
+					and other sources to identify trends and patterns in
+					investor sentiment. Additionally, technical analysis
+					involves studying historical market data, such as price
+					movements and trading volume, to identify patterns and
+					trends that may indicate future price movements. This
+					analysis may involve using various technical indicators and
+					chart patterns to make predictions about future price
+					movements. By combining sentiment analysis with technical
+					analysis, the forecast tool aims to provide users with
+					valuable insights into potential future price movements of
+					stocks. This information can be invaluable for investors and
+					traders looking to make informed decisions about buying,
+					selling, or holding stocks. The forecast tool may be
+					integrated into a website to provide users with real-time
+					updates and analysis, helping them stay ahead of market
+					trends and make more profitable investment decisions.
+				</p>
+			</div>
+			<div class="home-rev">
+				<img
+					src="../static/images/technicalAnalysisHome.jpeg"
+					alt="Technical Analysis"
+				/>
+				<p>
+					<b style="font-size: 20px"> Technical Analysis</b
+					><br /><br />
+					This is a method used by traders and investors to evaluate
+					and predict future price movements of stocks based on
+					historical market data. This analysis relies on the
+					assumption that historical price movements and trading
+					volume can help forecast future price trends. On a website,
+					a Technical Analysis section typically displays various
+					technical indicators for a particular stock. These
+					indicators are mathematical calculations derived from
+					historical price and volume data, and they help traders
+					assess the current state of a stock and predict its future
+					direction. Common technical indicators include moving
+					averages, relative strength index (RSI), MACD (Moving
+					Average Convergence Divergence), Bollinger Bands, and
+					stochastic oscillators, among others. For example, moving
+					averages help smooth out price fluctuations and identify
+					trends, while the RSI measures the momentum of a stock's
+					price movements. Bollinger Bands indicate volatility, and
+					the MACD shows the relationship between two moving averages.
+					By providing access to a range of technical indicators, the
+					Technical Analysis section empowers users to make informed
+					decisions about buying, selling, or holding stocks. It
+					allows traders to assess the strength of a trend, identify
+					potential entry or exit points, and manage risk effectively.
+					Overall, technical analysis plays a crucial role in helping
+					traders navigate the complexities of the stock market and
+					optimize their investment strategies.
+				</p>
+			</div>
+		</div>
+	</body>
 </html>

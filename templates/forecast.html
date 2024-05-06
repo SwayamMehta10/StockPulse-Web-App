@@ -52,7 +52,7 @@
 				<option value="{{ companyName }}">{{ companyName }}</option>
 				{% endfor %}
 			</select>
-			<br />
+			<br /><br />
 
 			<label>Select Period:</label>
 			<select id="period">
@@ -62,27 +62,41 @@
 				<option value="1Y">1Y</option>
 				<option value="5Y">5Y</option>
 			</select>
-			<br />
+			<br /><br />
 
 			<button id="applyButton">Apply</button>
-			<br />
+			<br /><br /><br />	
 
 			<h3 class="hidden">Forecast Chart</h3>
 			<div id="forecastChart"></div>
-			<br />
+			<br /><br /><br />
 
 			<h2 id="heading"></h2>
 			<div id="stockAnalysis"></div>
 
 			<h3 class="hidden">Latest News</h3>
+			<br /><br />
 			<div id="news-window" class="hidden">
 				<div id="news-feed" class="scrollable"></div>
 			</div>
+			<br /><br /><br />
 
 			<h3 class="hidden">Sentiment Analysis</h3>
+			<br /><br /><br />
 			<div class="sentiment">
-				<div id="sentiment_chart" style="float: left; width: 50%"></div>
-				<div id="sentiment_score" style="float: left; width: 50%"></div>
+				<div
+					id="sentiment_chart"
+					style="float: left; width: 50%"
+				></div>
+				<div
+					id="sentiment_score"
+					style="
+						float: left;
+						width: 40%;
+						font-size: 20px;
+						margin-top: 15%;
+					"
+				></div>
 				<div style="clear: both"></div>
 			</div>
 

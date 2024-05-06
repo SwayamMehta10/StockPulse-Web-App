@@ -4,7 +4,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		
+
 		<link rel="stylesheet" href="../static/css/Navbar.css" />
 		<link rel="stylesheet" href="../static/css/companyBackground.css" />
 		<link rel="stylesheet" href="../static/css/chatbot.css" />
@@ -42,18 +42,23 @@
 		</nav>
 
 		<div class="container">
-			<label for="company">Select Company:</label>
-			<select id="company" name="company">
-				{% for companyName in companyNames %}
-				<option value="{{ companyName }}">{{ companyName }}</option>
-				{% endfor %}
-			</select>
-			<br />
-
-			<button id="applyButton">Apply</button>
+			<label class="company" for="company">Select Company:</label>
+			<div class="company">
+				<select id="company" name="company">
+					{% for companyName in companyNames %}
+					<option value="{{ companyName }}">{{ companyName }}</option>
+					{% endfor %}
+				</select>
+			</div>
+			<div class="company">
+				<button id="applyButton">Apply</button>
+			</div>
 
 			<div class="company-info">
-				<h3 id="company-heading"></h3>
+				<h3
+					style="text-align: center; font-size: 20px"
+					id="company-heading"
+				></h3>
 				<p id="company-summary"></p>
 				<!-- <hr class="hidden" /> -->
 				<p id="company-website"><a></a></p>
@@ -82,12 +87,23 @@
 
 				<div id="financial_statement"></div>
 			</div>
-
-			<h3 class="hidden">Key Executives</h3>
-			<div id="key_executives"></div>
+			<br /><br />
+			<div class="key_executives">
+				<h3 class="hidden">Key Executives</h3>
+				<div class="key_executives" id="key_executives"></div>
+			</div>
+			<br /><br /><br />
 
 			<h3 class="hidden">ISS Governance Quality Score</h3>
-			<p class="hidden">
+			<br />
+			<p
+				style="
+					padding-left: 10vw;
+					padding-right: 10vw;
+					justify-content: center;
+				"
+				class="hidden"
+			>
 				The <i>Governance QualityScore</i> is a data-driven tool that
 				helps investors assess corporate governance risk in their
 				portfolios. It's a dynamic, relative governance profile scoring
@@ -103,7 +119,7 @@
 			<div id="risk_plot"></div>
 
 			<button id="chatButton">Chat</button>
-			<div id="chatbot-container" style="display:none;">
+			<div id="chatbot-container" style="display: none">
 				<h3 id="stockpulse-ai">StockPulse Assistant</h3>
 				<div id="chatbot-window">
 					<!-- Chatbot messages will be displayed here -->

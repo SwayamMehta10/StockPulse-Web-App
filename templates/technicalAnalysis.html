@@ -9,7 +9,7 @@
 		/>
 		<script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@3.0.1/dist/js/multi-select-tag.js"></script>
 		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-		
+
 		<link rel="stylesheet" href="../static/css/Navbar.css" />
 		<link rel="stylesheet" href="../static/css/technicalAnalysis.css" />
 		<link rel="stylesheet" href="../static/css/chatbot.css" />
@@ -46,16 +46,17 @@
 		</nav>
 
 		<div class="container">
-			<label for="company">Select Company:</label>
+			<label for="company">Select Company:</label><br />
 			<select id="company" name="company">
+				<br />
 				{% for companyName in companyNames %}
 				<option value="{{ companyName }}">{{ companyName }}</option>
 				{% endfor %}
 			</select>
 
-			<br />
+			<br /><br />
 			<label for="indicator">Select Technical Indicator:</label>
-			<select id="indicator" name="indicator" multiple>
+			<select class="indicator" id="indicator" name="indicator" multiple>
 				<option value="none">None</option>
 				<option value="sma">50-day SMA</option>
 				<option value="ewma">200-day EWMA</option>
@@ -65,7 +66,6 @@
 				<option value="atr">Average True Range</option>
 				<option value="emv">14-day Ease of Movement</option>
 			</select>
-			<br />
 
 			<label>Select Period:</label>
 			<select id="period">
@@ -78,12 +78,12 @@
 				<option value="5y">5Y</option>
 				<option value="max">Max</option>
 			</select>
-			<br />
+			<br /><br />
 
 			<label for="customDate">Custom Date Range:</label>
 			<input type="date" id="startDate" />
 			<input type="date" id="endDate" />
-			<br />
+			<br /><br />
 
 			<button id="applyButton">Apply</button>
 			<br />
@@ -92,10 +92,10 @@
 			<br />
 
 			<h2 id="heading"></h2>
-			<div id="stockAnalysis"></div>
+			<div id="stockAnalysis" style="padding: 0 50px 100px 50px"></div>
 
 			<button id="chatButton">Chat</button>
-			<div id="chatbot-container" style="display:none;">
+			<div id="chatbot-container" style="display: none">
 				<h3 id="stockpulse-ai">StockPulse Assistant</h3>
 				<div id="chatbot-window">
 					<!-- Chatbot messages will be displayed here -->

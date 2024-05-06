@@ -90,7 +90,15 @@ $(document).ready(function () {
 						recommendation = "Strong Buy";
 						color = "#008000";
 					}
-					$("#sentiment_score").html("Sentiment Score = <b>" + score + "</b><br/>Recommendation: <b style='color: " + color + ";'>" + recommendation + "</b>");
+					$("#sentiment_score").html(
+						"Sentiment Score = <b>" +
+							score +
+							"</b><br/>Recommendation: <b style='color: " +
+							color +
+							";'>" +
+							recommendation +
+							"</b>"
+					);
 				}
 			},
 			error: function (xhr, status, error) {
