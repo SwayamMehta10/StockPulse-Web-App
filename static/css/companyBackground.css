@@ -32,10 +32,10 @@ select:hover {
 	margin-right: 10vw;
 }
 
-*:not(nav):not(body) {
+/* *:not(nav):not(body) {
 	margin-top: 5px;
 	margin-bottom: 5px;
-}
+} */
 
 #applyButton {
 	padding: 8px 16px;
