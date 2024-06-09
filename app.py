@@ -11,13 +11,14 @@ from os import getenv
 from PIL import Image
 from prophet import Prophet
 from prophet.plot import plot_plotly
+
 # from sklearn.metrics import mean_absolute_error
 # import requests
 # from bs4 import BeautifulSoup
 from fuzzywuzzy import fuzz
+
 # from urllib.request import urlopen, Request
 # from urllib.error import HTTPError
-
 
 GOOGLE_API_KEY = getenv("GOOGLE_API_KEY")
 genai.configure(api_key=GOOGLE_API_KEY)
@@ -33,6 +34,11 @@ numberOfCompanies = df.shape[0]
 options = []
 for i in range(numberOfCompanies):
     options.append(companyNames[i] + " : " + companySymbols[i])
+
+
+@app.route("/api/key")
+def get_api_key():
+    return jsonify({"api_key": GOOGLE_API_KEY})
 
 
 @app.route("/")
