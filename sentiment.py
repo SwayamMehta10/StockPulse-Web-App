@@ -1,3 +1,6 @@
+import nltk
+nltk.download('vader_lexicon')
+
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import pandas as pd
 import plotly.graph_objs as go
