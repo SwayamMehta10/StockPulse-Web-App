@@ -20,7 +20,12 @@ from fuzzywuzzy import fuzz
 # from urllib.request import urlopen, Request
 # from urllib.error import HTTPError
 
-GOOGLE_API_KEY = getenv("GOOGLE_API_KEY")
+# For prod env:
+import os
+GOOGLE_API_KEY = os.environ.get('GOOGLE_API_KEY')
+
+# for local env:
+# GOOGLE_API_KEY = getenv("GOOGLE_API_KEY")
 genai.configure(api_key=GOOGLE_API_KEY)
 model = genai.GenerativeModel("gemini-pro-vision")
 

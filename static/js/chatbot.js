@@ -1,12 +1,15 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const response = await fetch("/api/key");
-// console.log(response);
-const data = await response.json();
-// console.log(data);
-const API_KEY = data.api_key;
-// console.log(API_KEY);
+// For local env:
+// const response = await fetch("/api/key");
+// // console.log(response);
+// const data = await response.json();
+// // console.log(data);
+// const API_KEY = data.api_key;
+// // console.log(API_KEY);
 
+// For prod env:
+const API_KEY = process.env.GOOGLE_API_KEY;
 const genAI = new GoogleGenerativeAI(API_KEY);
 
 const gen_model = genAI.getGenerativeModel({ model: "gemini-pro" });
