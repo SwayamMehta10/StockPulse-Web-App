@@ -337,7 +337,3 @@ def fetch_official_company_name():
             return jsonify({"text": "Request content type is not JSON."}), 415
     except Exception as e:
         return jsonify({"text": f"Error: {str(e)}"}), 500
-
-
-if __name__ == "__main__":
-    app.run(debug=True)
